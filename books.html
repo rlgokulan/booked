@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <h2>Available Books</h2>
+    <div class="book-list">
+        {% for book in books %}
+        <div class="book">
+            <h3>{{ book.title }}</h3>
+            <p>Author: {{ book.author }}</p>
+            <p>Price: {{ book.price }}</p>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}
